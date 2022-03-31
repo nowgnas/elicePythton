@@ -1,3 +1,7 @@
 {
-  "python.analysis.extraPaths": ["./"]
+  "python.analysis.extraPaths": [
+    "./",
+    "./onlineClass/week11Datastructure/class2/set집합",
+    "./onlineClass/week11Datastructure/class2/netflix시청데이터"
+  ]
 }

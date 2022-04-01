@@ -2,6 +2,8 @@
   "python.analysis.extraPaths": [
     "./",
     "./onlineClass/week11Datastructure/class2/set집합",
-    "./onlineClass/week11Datastructure/class2/netflix시청데이터"
+    "./onlineClass/week11Datastructure/class2/netflix시청데이터",
+    "./onlineClass/week11Datastructure/class3/최댓값기계",
+    "./onlineClass/week11Datastructure/class3/구슬넣기"
   ]
 }

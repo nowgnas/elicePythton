@@ -6,8 +6,8 @@
 
 class LinkedListElement:
     def __init__(self, val, ptr):
-        self.value = None
-        self.myNext = None
+        self.value = val
+        self.myNext = ptr
 
 
 class LinkedListPipe:
@@ -27,19 +27,38 @@ class LinkedListPipe:
         '''
         파이프의 왼쪽으로 구슬 n을 삽입합니다.
         '''
-        pass
+        if self.start == None and self.end == None:
+            element = LinkedListElement(n, None)
+            self.start = element
+            self.end = element
+        else:
+            element = LinkedListElement(n, self.start)
+            self.start = element
 
     def addRight(self, n):
         '''
         파이프의 오른쪽으로 구슬 n을 삽입합니다.
         '''
-        pass
+        if self.start == None and self.end == None:
+            element = LinkedListElement(n, None)
+            self.start = element
+            self.end = element
+        else:
+            element = LinkedListElement(n, None)
+            self.end.myNext = element
+            self.end = element
 
     def getBeads(self):
         '''
         파이프의 배치를 list로 반환합니다.
         '''
-        pass
+        result = []
+        current = self.start
+        while current != None:
+            result.append(current.value)
+            current = current.myNext
+
+        return result
 
 
 def processBeads(myInput):
@@ -61,8 +80,11 @@ def processBeads(myInput):
 
     myPipe = LinkedListPipe()
     for value, way in myInput:
-        node = LinkedListElement(value, way)
+        if way == 0:
+            myPipe.addLeft(value)
+        else:
+            myPipe.addRight(value)
 
-    result = []
+    result = myPipe.getBeads()
 
     return result

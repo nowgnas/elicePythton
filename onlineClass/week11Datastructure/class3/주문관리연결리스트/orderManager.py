@@ -58,7 +58,7 @@ class orderManager:
         current = self.start
         while current != None:
             if current.data == orderId:
-                return cnt
+                return cnt+1
             current = current.myNext
             cnt = cnt+1
         return -1

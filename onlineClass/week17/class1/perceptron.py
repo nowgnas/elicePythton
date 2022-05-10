@@ -14,7 +14,6 @@
 
 
 def Perceptron(x_1, x_2, w_1, w_2):
-    value = [x_1, x_2, w_1, w_2]
 
     bias = -1
 

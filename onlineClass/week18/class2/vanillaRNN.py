@@ -1,6 +1,7 @@
 from tensorflow.keras import layers, Sequential
 import tensorflow as tf
 import os
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
@@ -13,6 +14,7 @@ def build_model1():
     model.add(layers.SimpleRNN(3))
 
     return model
+
 
 # TODO: [지시사항 2번] 두번째 모델을 완성하세요.
 

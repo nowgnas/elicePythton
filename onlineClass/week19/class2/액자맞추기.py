@@ -37,3 +37,5 @@ if __name__ == "__main__":
     result_img = solve_puzzle(img, piece_order)
     cv2.imwrite('result.jpg', result_img)
     elice_utils.send_image('result.jpg')
+
+# jk
